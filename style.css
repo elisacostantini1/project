@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 @media screen and (max-width: 1024px) {
   .container {
     position: fixed;
@@ -24,7 +25,7 @@
 nav {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  color: white;
+  color: black;
 }
 
 nav .logo {
@@ -41,7 +42,7 @@ nav .links {
 }
 
 nav .links a {
-  color: white;
+  color: black;
   text-decoration: none;
   cursor: pointer;
   font-weight: 400;
@@ -56,11 +57,11 @@ nav li {
   transform: translateX(-70px);
   width: auto;
   height: 2px;
-  background-color: white;
+  background-color: black;
   transition: 0.5s cubic-bezier(0.97, 0.02, 0.44, 0.99);
 }
 
-.list:hover > .home_underline {
+.list:hover>.home_underline {
   transform: translatex(0px);
 }
 
@@ -93,10 +94,12 @@ button:hover::before {
   transform: skewX(40deg) translateX(100px);
   animation: btnshine 1s cubic-bezier(0.97, 0.02, 0.44, 0.99) infinite;
 }
+
 @keyframes btnshine {
   from {
     transform: skewX(40deg) translateX(-90px);
   }
+
   to {
     transform: skewX(40deg) translateX(100px);
   }
@@ -116,7 +119,7 @@ nav .icon-burger {
 nav .icon-burger .line {
   width: 30px;
   height: 4px;
-  background-color: white;
+  background-color: black;
   margin: 5px;
   border-radius: 5px;
 }
@@ -125,9 +128,11 @@ nav .icon-burger .line {
   nav .logo {
     z-index: 99;
   }
+
   .container {
     margin: 30px 10px 30px 30px;
   }
+
   nav .links {
     float: none;
     position: fixed;
@@ -146,9 +151,11 @@ nav .icon-burger .line {
     overflow: hidden;
     transition: 0.5s cubic-bezier(0.97, 0.02, 0.44, 0.99);
   }
+
   .home_underline {
     display: none;
   }
+
   button {
     border: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -166,25 +173,31 @@ nav .icon-burger .line {
     color: white;
     font-weight: 600;
   }
+
   nav .icon-burger {
     z-index: 9;
     display: block;
     caret-color: transparent;
   }
-  nav :checked ~ .links {
+
+  nav :checked~.links {
     left: 0;
   }
+
   nav .icon-burger .line {
     transition: 0.3s cubic-bezier(0.97, 0.02, 0.44, 0.99);
   }
-  nav :checked ~ .icon-burger .line:nth-child(1) {
+
+  nav :checked~.icon-burger .line:nth-child(1) {
     transform: translateY(9px) rotate(50deg);
   }
-  nav :checked ~ .icon-burger .line:nth-child(2) {
+
+  nav :checked~.icon-burger .line:nth-child(2) {
     transform: translateX(10px);
     opacity: 0;
   }
-  nav :checked ~ .icon-burger .line:nth-child(3) {
+
+  nav :checked~.icon-burger .line:nth-child(3) {
     transform: translateY(-9px) rotate(-50deg);
   }
 }
